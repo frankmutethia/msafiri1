@@ -3,6 +3,7 @@ import 'package:firebase/screens/login_screen.dart';
 import 'package:flutter/screens/signup_screen.dart'; */
 import 'package:flutter/material.dart';
 import 'package:msafiri/screens/destinationdetails_screen.dart';
+import 'package:msafiri/screens/destinationdetails_screenthree.dart';
 import 'package:msafiri/screens/destinationdetails_screentwo.dart';
 import 'package:msafiri/screens/google_maps.dart';
 import 'package:msafiri/screens/home_screen.dart';
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
             DestinationDetailsScreen(),
         DestinationDetailsScreenTwo.routeName: (context) =>
             DestinationDetailsScreenTwo(),
+        DestinationDetailsScreenThree.routeName: (context) =>
+            DestinationDetailsScreenThree(),
       },
     );
   }

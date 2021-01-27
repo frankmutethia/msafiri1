@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:msafiri/screens/activities.dart';
+import 'package:msafiri/screens/google_maps.dart';
 
 class DestinationDetailsScreenTwo extends StatefulWidget {
   static const routeName = "destinationdetailscreentwo";
@@ -188,22 +189,32 @@ class _DestinationDetailsScreenTwoState
                         vertical: 10,
                         horizontal: 20,
                       ),
-                      child: Column(
-                        children: <Widget>[
-                          Icon(
-                            Icons.map,
-                            size: 20,
-                            color: Theme.of(context).primaryColor,
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Location",
-                            style: TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                      child: GestureDetector(
+                        onTap: () {
+                          // Navigator.pushNamed(context, MyHomePage.id);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      MyHomePage()));
+                        },
+                        child: Column(
+                          children: <Widget>[
+                            Icon(
+                              Icons.location_pin,
+                              size: 20,
+                              color: Theme.of(context).primaryColor,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Location",
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
